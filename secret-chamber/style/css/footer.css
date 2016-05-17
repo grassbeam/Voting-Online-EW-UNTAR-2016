@@ -1,0 +1,36 @@
+
+/* ------------------------- */
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -1.2%;
+}
+.footer, .push {
+	height: -1.2%;
+}
+.footer-list-1{
+	text-align:justify;
+}
+.footer-panel{
+	margin-bottom:0px;
+}
+.footer-bottom{
+	background-color:#e0e0eb;
+	color:#000;
+	font-size:12px;
+	text-align:center;
+	vertical-align:middle;
+	line-height: 60px;
+	height:60px;
+}
+.logo-fti {
+	padding-right: 30px;
+}
+/* ------------------------------------ */

@@ -1,0 +1,29 @@
+
+/* ------------------------- */
+
+.footer-mobile-container{
+	size:100%;
+	float:none;
+	padding-top: 200px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.footer-mobile-list-1{
+	text-align:justify;
+}
+.footer-mobile-panel{
+	margin-bottom:0px;
+}
+.footer-mobile-bottom{
+	background-color:#e0e0eb;
+	color:#000;
+	font-size:80%;
+	text-align:center;
+	vertical-align:middle;
+	line-height: 60px;
+}
+.logo-fti-mobile {
+	padding-right: 5px;
+}
+/* ------------------------------------ */

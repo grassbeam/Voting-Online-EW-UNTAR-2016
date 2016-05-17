@@ -1,0 +1,340 @@
+@grid-columns:              10;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+
+
+// Creates a wrapper for a series of columns
+.make-row(@gutter: @grid-gutter-width) {
+  // Then clear the floated columns
+  .clearfix();
+
+  @media (min-width: @screen-sm-min) {
+    margin-left:  (@gutter / -2);
+    margin-right: (@gutter / -2);
+  }
+
+  // Negative margin nested rows out to align the content of columns
+  .row {
+    margin-left:  (@gutter / -2);
+    margin-right: (@gutter / -2);
+  }
+}
+
+// Generate the extra small columns
+.make-xs-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the small columns
+.make-sm-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-sm-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the small column offsets
+.make-sm-column-offset(@columns) {
+  @media (min-width: @screen-sm-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-sm-column-push(@columns) {
+  @media (min-width: @screen-sm-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-sm-column-pull(@columns) {
+  @media (min-width: @screen-sm-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the medium columns
+.make-md-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-md-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the medium column offsets
+.make-md-column-offset(@columns) {
+  @media (min-width: @screen-md-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-md-column-push(@columns) {
+  @media (min-width: @screen-md-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-md-column-pull(@columns) {
+  @media (min-width: @screen-md-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the large columns
+.make-lg-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-lg-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the large column offsets
+.make-lg-column-offset(@columns) {
+  @media (min-width: @screen-lg-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-lg-column-push(@columns) {
+  @media (min-width: @screen-lg-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-lg-column-pull(@columns) {
+  @media (min-width: @screen-lg-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+.row-stand{
+	.make-md-column(14);
+}
+
+.banner-top-container .logo-fti, .banner-top-container h1, .banner-top-container .logo-ew2016{
+  display: inline;
+  vertical-align: center;
+}
+.title-text{
+  padding-left: 60px;
+}
+.logo-untar-container{
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.logo-ew2016 {
+  padding-top: 5px;
+}
+
+
+
+
+
+h3{
+  font-weight: bold;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+      .title-container {
+        text-align: left;
+        padding-top: 5%;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        padding-left: 30%;
+        font-size: 90%;
+      }
+
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: hidden;
+        display: none;
+      }
+    }
+    /* Smartphones (landscape) ----------- */
+    @media only screen
+    and (min-width : 321px) {
+      .title-container {
+        text-align: left;
+        padding-top: 5%;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        padding-left: 30%;
+        font-size: 90%;
+      }
+
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: hidden;
+        display: none;
+      }
+    }
+    /* Smartphones (portrait) ----------- */
+    @media only screen
+    and (max-width : 320px) {
+      .title-container {
+        text-align: left;
+        padding-top: 5%;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        padding-left: 30%;
+        font-size: 90%;
+      }
+
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: hidden;
+        display: none;
+      }
+    }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+      .title-container {
+        text-align: left;
+        padding-top: 5%;
+        padding-left: -15%;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        padding-left: 5%;
+        font-size: 150%;
+      }
+
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: visible;
+        display: inline;
+      } 
+    }
+    /* iPads (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+     .title-container {
+        text-align: left;
+        padding-top: 5%;
+        padding-left: -15%;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        padding-left: 5%;
+        font-size: 150%;
+      }
+
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: visible;
+        display: inline;
+      }     
+    }
+    /* iPads (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+      .title-container {
+        text-align: left;
+        padding-top: 5%;
+        padding-left: -15%;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        padding-left: 0px;
+        font-size: 150%;
+      }
+
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: visible;
+        display: inline;
+      } 
+    }
+/* Desktops and laptops ----------- */
+@media only screen
+    and (min-width : 1224px) {
+      .logo-untar-container, .logo-ew2016-container{
+        visibility: visible;
+        display: inline;
+      }
+      .banner-top-container{
+        padding-left: 3%;
+      }
+      .title-container {
+        text-align: center;
+        position:absolute;
+        padding-left: 2%;
+        padding-top: 1%;
+        top: 2px;
+        height: 93;
+      }
+      .title-container h1{
+        margin:auto;
+        vertical-align:middle;
+        font-size: 200%;
+        padding-left: 0px;
+      }
+      h3
+      {
+        font-weight: bold;
+        font-size: 110%;
+      }
+     .thumbnail
+     {
+      height: 35%;
+
+     }
+     #stand_8, #stand_9, #stand_10, #stand_11, #stand_12, #stand_13, #stand_14 {
+      height: 50%;
+      padding-bottom: 3px;
+     }
+     #stand_1, #stand_2, #stand_3, #stand_4, #stand_5, #stand_6, #stand_7{
+      height: 30%;
+      padding-bottom:3px;
+     }
+     
+     #caption-upper
+     {
+      height: 140px;
+     }
+
+     #caption-lower{
+      height: 150px;
+     }
+     
+    }

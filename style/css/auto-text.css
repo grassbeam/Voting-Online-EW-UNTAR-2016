@@ -1,0 +1,111 @@
+ @charset "utf-8";
+    /* CSS Document */
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+     .fonts
+     {
+      font-size: 75%;
+     }    
+     .btn-vote
+     {
+      padding-left: 3%;
+     } 
+    }
+    /* Smartphones (landscape) ----------- */
+    @media only screen
+    and (min-width : 321px) {
+     .fonts
+     {
+      font-size: 120%;
+     }  
+     .btn-vote
+     {
+      padding-left: 3%;
+     } 
+    }
+    /* Smartphones (portrait) ----------- */
+    @media only screen
+    and (max-width : 320px) {
+     .fonts
+     {
+      font-size: 120%;
+     } 
+     .btn-vote
+     {
+      padding-left: 3%;
+     }  
+    }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+     .fonts
+     {
+      font-size: 60%;
+     } 
+     .btn-vote
+     {
+      padding-left: 5%;
+     }    
+    }
+    /* iPads (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+     .fonts
+     {
+      font-size: 60%;
+     }
+     .btn-vote
+     {
+      padding-left: 5%;
+     }     
+    }
+    /* iPads (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+
+     .fonts
+     {
+      font-size: 60%;
+     }
+     .btn-vote
+     {
+      padding-left: 5%;
+     }  
+    }
+    /* Desktops and laptops ----------- */
+    @media only screen
+    and (min-width : 1224px) {
+     .fonts
+     {
+      font-size: 90%;
+      height: 45%;
+     }
+     .btn-vote
+     {
+      padding-left: 10%;
+     }
+    }
+    /* Large screens ----------- */
+    @media only screen
+    and (min-width : 1824px) {
+     .fonts
+     {
+      font-size: 140%;
+     }    
+    }
+    /* iPhone 4 ----------- */
+    @media
+    only screen and (-webkit-min-device-pixel-ratio : 1.5),
+    only screen and (min-device-pixel-ratio : 1.5) {
+     .fonts
+     {
+      font-size: 190%;
+     }    
+    }
